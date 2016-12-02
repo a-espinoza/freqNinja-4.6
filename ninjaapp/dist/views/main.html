@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col col-sm-6">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">My events</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-event">
+          <div class="well" style="text-align:center;" ng-if="noEvents">
+            <p>You currently do not have any events.</p>
+          </div>
+          <li class="list-event-item" ng-repeat="event in events"><a ui-sref="event.view({eventId: event.eventName})">{{ event.data.eventName }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-6">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <button class="btn btn-primary btn-block" ui-sref="eventCreate()"><i class="fa fa-plus"></i> CREATE RACE EVENT</button>
+        <button class="btn btn-primary btn-block" ui-sref="find()"><i class="fa fa-flag-checkered"></i> JOIN RACE</button>
+      </div>
+    </div>
+  </div>
+</div>

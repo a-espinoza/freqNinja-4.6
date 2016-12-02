@@ -1,0 +1,14 @@
+<br/>
+<div class="row">
+  <div class="col-xs-4 col-md-2" ng-repeat="event in events">
+    <a ui-sref="event.view({eventId:'{{ event.data.eventName }}'})">
+    </a>
+  </div>
+</div>
+
+<div ng-show="event == 'event'">this is a goodbye message</div>
+
+<button class="btn btn-primary" ui-sref="pilotCreate()">
+  <i class="fa fa-plus"></i> New Pilots
+</button>
+<br/>
