@@ -1,0 +1,12 @@
+<br/>
+<div class="row">
+  <div class="col-xs-4 col-md-2" ng-repeat="pilot in pilots">
+    <a ui-sref="pilot.view({pilotId:'{{ pilot._id }}'})" class="thumbnail">
+      <img ng-src="{{ pilot.data.picture[0].url }}">
+    </a>
+  </div>
+</div>
+<button ng-if="currentResource.resource.data.status === 'open'" class="btn btn-primary" ui-sref="pilotCreate()">
+  <i class="fa fa-plus"></i> New Pilot
+</button>
+<br/>
